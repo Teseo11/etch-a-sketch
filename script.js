@@ -1,9 +1,10 @@
-const $squareContainer = document.querySelector("#square-container");
+const $squareContainerParent = document.querySelector("#square-container");
+const $squareContainer = document.createElement("div");
+const $squareBox = document.createElement("div");
 
-// Aplicar estilos y una clase a la variable square
+$squareContainer.classList.add("square-containertest");
+$squareBox.classList.add("square");
 
-for (let index = 0; index < 200; index++) {
-  const $square = document.createElement("div");
-  $square.classList.add("square");
-  $squareContainer.appendChild($square);
-}
+$squareContainer.appendChild($squareBox);
+
+$squareContainerParent.appendChild($squareContainer);
