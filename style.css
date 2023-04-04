@@ -4,7 +4,7 @@
   padding: 0px;
 }
 
-.square-container {
+.square-container-parent {
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -15,13 +15,13 @@
   border: 1px solid black;
 }
 
-.square-containertest {
+.square-box-container {
   width: 500px;
   display: flex;
   flex-grow: 1;
 }
 
-.square {
+.square-box {
   border: 1px solid white;
   background-color: rgba(70, 151, 41, 0.78);
   flex-grow: 1;

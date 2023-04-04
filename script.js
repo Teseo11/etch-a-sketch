@@ -1,16 +1,18 @@
-const $squareContainerParent = document.querySelector("#square-container"),
-  $squareContainer = document.createElement("div"),
-  $squareBox = document.createElement("div");
+const $squareContainerParent = document.querySelector(
+  "#square-container-parent"
+);
 
 const addSquares = (column, row) => {
   for (let i = 0; i < column; i++) {
-    const $squareContainer = document.createElement("div");
-    $squareContainer.classList.add("square-containertest");
-    $squareContainerParent.appendChild($squareContainer);
+    // Add columns
+    const $squareBoxContainer = document.createElement("div");
+    $squareBoxContainer.classList.add("square-box-container");
+    $squareContainerParent.appendChild($squareBoxContainer);
+    // Add rows
     for (let index = 0; index < row; index++) {
       const $squareBox = document.createElement("div");
-      $squareBox.classList.add("square");
-      $squareContainer.appendChild($squareBox);
+      $squareBox.classList.add("square-box");
+      $squareBoxContainer.appendChild($squareBox);
     }
   }
 };
