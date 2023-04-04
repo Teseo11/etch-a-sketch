@@ -1,0 +1,25 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.square-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.square {
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  background-color: blueviolet;
+}
