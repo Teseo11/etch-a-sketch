@@ -2,6 +2,9 @@
 const $squareContainerParent = document.querySelector(
   "#square-container-parent"
 );
+
+const btnBoxSize = document.getElementById("btn-box-size");
+
 let squareBoxGlobal;
 
 // Function that adds rows and columns
@@ -28,4 +31,19 @@ document.addEventListener("click", (e) => {
     squareBoxGlobal = e.target;
     squareBoxGlobal.classList.add("black");
   }
+
+  if (e.target.matches(".btn-box-size")) {
+    let columnSize = prompt("Dame el valor 1", 16);
+    let rowSize = columnSize;
+    removeChildsFromParentContainer();
+    addSquares(columnSize, rowSize);
+  }
 });
+
+function removeChildsFromParentContainer() {
+  while ($squareContainerParent.hasChildNodes()) {
+    $squareContainerParent.removeChild($squareContainerParent.firstChild);
+  }
+}
+
+console.log($squareContainerParent.hasChildNodes());
