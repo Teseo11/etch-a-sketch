@@ -35,8 +35,14 @@ document.addEventListener("click", (e) => {
   if (e.target.matches(".btn-box-size")) {
     let columnSize = prompt("Dame el valor 1", 16);
     let rowSize = columnSize;
-    removeChildsFromParentContainer();
-    addSquares(columnSize, rowSize);
+    if (isNaN(columnSize) === true) {
+      alert("Debes ingresar un numero!");
+    } else if (columnSize > 100) {
+      alert("No se puede ingresar valores mayores a 100");
+    } else {
+      removeChildsFromParentContainer();
+      addSquares(parseInt(columnSize), parseInt(rowSize));
+    }
   }
 });
 
@@ -45,5 +51,3 @@ function removeChildsFromParentContainer() {
     $squareContainerParent.removeChild($squareContainerParent.firstChild);
   }
 }
-
-console.log($squareContainerParent.hasChildNodes());
